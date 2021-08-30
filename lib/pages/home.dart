@@ -133,11 +133,9 @@ class _HomePageState extends State<HomePage> {
                   height: 498,
                   margin: EdgeInsets.all(12),
                   child: StaggeredGridView.countBuilder(
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
                     crossAxisCount: 2,
-                    mainAxisSpacing: 4.0,
-                    crossAxisSpacing: 4.0,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 12,
                     itemCount: imageList.length,
                     itemBuilder: (context, index) {
                       return Container(
