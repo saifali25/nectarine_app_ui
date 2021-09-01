@@ -134,8 +134,8 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.all(12),
                   child: StaggeredGridView.countBuilder(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 12,
+                    crossAxisSpacing: 14,
+                    mainAxisSpacing: 16,
                     itemCount: imageList.length,
                     itemBuilder: (context, index) {
                       return Container(
@@ -145,9 +145,10 @@ class _HomePageState extends State<HomePage> {
                                 BorderRadius.all(Radius.circular(15))),
                         child: ClipRRect(
                           borderRadius: BorderRadius.all(Radius.circular(15)),
-                          child: FadeInImage.memoryNetwork(
-                            placeholder: kTransparentImage,
-                            image: imageList[index],
+                          // Has to return Card for listing Products
+                          // but for the time being displaying a list of images
+                          child: Image.asset(
+                            imageList[index],
                             fit: BoxFit.cover,
                           ),
                         ),
