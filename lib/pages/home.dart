@@ -3,6 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:nectarine_app_ui/helper/productsData.dart';
 import 'package:nectarine_app_ui/pages/getStarted.dart';
+import 'package:nectarine_app_ui/pages/product.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class HomePage extends StatefulWidget {
@@ -145,11 +146,19 @@ class _HomePageState extends State<HomePage> {
                                 BorderRadius.all(Radius.circular(15))),
                         child: ClipRRect(
                           borderRadius: BorderRadius.all(Radius.circular(15)),
-                          // Has to return Card for listing Products
-                          // but for the time being displaying a list of images
-                          child: Image.asset(
-                            imageList[index],
-                            fit: BoxFit.cover,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductView()));
+                            },
+                            // Has to return Card for listing Products
+                            // but for the time being displaying a list of images
+                            child: Image.asset(
+                              imageList[index],
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       );
