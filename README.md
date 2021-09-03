@@ -1,6 +1,6 @@
-# nectarine_app_ui
+# Nectarine Oils App UI
 
-A new Flutter project.
+A UI Implementation For A Flutter Application
 
 ## Getting Started
 
